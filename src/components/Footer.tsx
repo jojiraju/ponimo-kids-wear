@@ -10,7 +10,6 @@ const footerLinks = {
     { name: "Boys Couture", href: "/shop?category=boys" },
     { name: "Girls Boutique", href: "/shop?category=girls" },
     { name: "Toddler Essentials", href: "/shop?category=toddlers" },
-    { name: "New Arrivals", href: "/new-arrivals" },
   ],
   atelier: [
     { name: "Our Heritage", href: "/about" },
@@ -22,7 +21,6 @@ const footerLinks = {
     { name: "Concierge", href: "/contact" },
     { name: "Shipping & Boutique Returns", href: "/shipping" },
     { name: "Size Atelier", href: "/size-guide" },
-    { name: "FAQs", href: "/faq" },
   ],
 };
 

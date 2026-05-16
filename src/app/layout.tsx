@@ -26,9 +26,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${outfit.variable} antialiased`}
+      className={`${playfair.variable} ${outfit.variable} antialiased overflow-x-hidden`}
     >
-      <body className="font-outfit bg-[#FAF9F6]">
+      <body className="font-outfit bg-[#FAF9F6] overflow-x-hidden">
         <SmoothScroll>
           {children}
         </SmoothScroll>
