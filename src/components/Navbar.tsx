@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils";
 import gsap from "gsap";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Shop", href: "/shop" },
-  { name: "Categories", href: "/categories" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "#" },
+  { name: "Shop", href: "#shop" },
+  { name: "Categories", href: "#categories" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
 ];
 
 
@@ -84,7 +84,7 @@ export default function Navbar() {
       {/* Action Button (Desktop) */}
       <div className="hidden lg:block">
         <Link 
-          href="/shop"
+          href="#shop"
           className="px-8 py-3 rounded-full bg-primary text-white text-[10px] font-bold uppercase tracking-widest hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/20"
         >
           Shop Collection
