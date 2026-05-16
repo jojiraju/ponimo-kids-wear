@@ -4,6 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import TextType from "./animations/TextType";
+import ShinyText from "./animations/ShinyText";
 
 const footerLinks = {
   collections: [
@@ -42,20 +46,28 @@ export default function Footer() {
               </div>
             </Link>
             
-            <div className="space-y-6">
-              <h3 className="text-2xl font-heading font-light max-w-sm leading-relaxed">
-                Join our world for <span className="italic text-primary">exclusive boutique</span> updates and artisanal collections.
+            <div className="space-y-8">
+              <h3 className="text-3xl md:text-5xl font-heading font-light leading-[1.1] max-w-2xl">
+                {"Join our world for exclusive boutique updates and artisanal collections.".split(" ").map((word, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      duration: 0.8, 
+                      delay: i * 0.05,
+                      ease: [0.215, 0.61, 0.355, 1]
+                    }}
+                    viewport={{ once: true }}
+                    className={cn(
+                      "inline-block mr-[0.2em]",
+                      (word === "exclusive" || word === "artisanal") ? "text-primary italic font-medium" : "text-white"
+                    )}
+                  >
+                    {word}
+                  </motion.span>
+                ))}
               </h3>
-              <div className="relative max-w-md group">
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
-                  className="w-full bg-transparent border-b border-white/20 py-4 text-lg font-light focus:outline-none focus:border-primary transition-colors"
-                />
-                <button className="absolute right-0 bottom-4 text-primary group-hover:translate-x-2 transition-transform">
-                  <HiOutlineArrowRight size={24} />
-                </button>
-              </div>
             </div>
 
             <div className="flex items-center gap-6 pt-4">

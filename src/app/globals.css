@@ -112,6 +112,6 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-outfit);
-  --font-heading: var(--font-playfair);
+  --font-sans: var(--font-jakarta);
+  --font-heading: var(--font-cormorant);
 }

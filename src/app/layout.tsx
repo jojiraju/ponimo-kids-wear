@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Outfit } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
@@ -26,9 +27,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${outfit.variable} antialiased overflow-x-hidden`}
+      className={`${cormorant.variable} ${jakarta.variable} antialiased overflow-x-hidden`}
+      suppressHydrationWarning
     >
-      <body className="font-outfit bg-[#FAF9F6] overflow-x-hidden">
+      <body className="font-jakarta bg-[#FAF9F6] overflow-x-hidden">
         <SmoothScroll>
           {children}
         </SmoothScroll>

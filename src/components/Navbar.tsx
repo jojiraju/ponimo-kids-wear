@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiOutlineBars3, HiOutlineXMark } from "react-icons/hi2";
+import { HiOutlineBars3BottomRight, HiOutlineXMark } from "react-icons/hi2";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
 
@@ -68,28 +68,36 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden lg:flex items-center gap-8 bg-white/40 backdrop-blur-md px-8 py-3 rounded-full border border-white/20">
+      <div className="hidden lg:flex items-center gap-12">
         {navLinks.map((link) => (
           <Link
             key={link.name}
             href={link.href}
-            className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors relative group"
+            className="text-[11px] font-bold uppercase tracking-[0.3em] text-foreground/60 hover:text-primary transition-all relative group"
           >
             {link.name}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full" />
           </Link>
         ))}
       </div>
 
-      {/* Actions */}
-      <div className="flex items-center gap-4">
-        <button
-          className="lg:hidden z-50 text-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      {/* Action Button (Desktop) */}
+      <div className="hidden lg:block">
+        <Link 
+          href="/shop"
+          className="px-8 py-3 rounded-full bg-primary text-white text-[10px] font-bold uppercase tracking-widest hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/20"
         >
-          {mobileMenuOpen ? <HiOutlineXMark size={24} /> : <HiOutlineBars3 size={24} />}
-        </button>
+          Shop Collection
+        </Link>
       </div>
+
+      {/* Mobile Toggle */}
+      <button
+        onClick={() => setMobileMenuOpen(true)}
+        className="lg:hidden w-12 h-12 rounded-full border border-secondary flex items-center justify-center text-foreground hover:bg-secondary transition-all"
+      >
+        <HiOutlineBars3BottomRight size={24} />
+      </button>
 
       {/* Mobile Menu */}
       <AnimatePresence>
