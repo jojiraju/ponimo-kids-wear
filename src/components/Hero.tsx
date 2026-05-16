@@ -73,8 +73,8 @@ export default function Hero() {
         className="relative w-full max-w-4xl aspect-[3/4] md:aspect-[21/9] rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.2)] z-10"
       >
         <Image
-          src="/images/hero-master.png"
-          alt="Cinematic Kids Fashion"
+          src="/images/kerala-hero.png"
+          alt="Cinematic Kerala Baby Fashion"
           fill
           priority
           className="object-cover"
@@ -142,15 +142,26 @@ export default function Hero() {
                 <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-primary/60">Loved by 5k+ Families</span>
               </div>
               <p className="text-[10px] md:text-xs text-foreground/60 leading-relaxed font-light">
-                Luxury for the next generation.
+                Artisanal Baby Wear for the First 18 Months.
               </p>
             </div>
           </div>
 
           <div className="relative group w-full md:w-auto">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-            <Button size="lg" className="relative w-full md:w-auto rounded-full h-14 md:h-16 px-10 md:px-16 text-lg md:text-xl group bg-primary hover:bg-primary/90 shadow-2xl transition-all duration-500 hover:scale-[1.02]">
-              Explore Collection
+            <Button 
+              size="lg" 
+              onClick={() => {
+                const elem = document.getElementById("shop");
+                if (elem) {
+                  const offset = 80;
+                  const targetPos = elem.getBoundingClientRect().top + window.pageYOffset - offset;
+                  window.scrollTo({ top: targetPos, behavior: "smooth" });
+                }
+              }}
+              className="relative w-full md:w-auto rounded-full h-14 md:h-16 px-10 md:px-16 text-lg md:text-xl group bg-primary hover:bg-primary/90 shadow-2xl transition-all duration-500 hover:scale-[1.02]"
+            >
+              View Collection
               <HiOutlineArrowRight className="ml-2 md:ml-3 w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform" />
             </Button>
           </div>
@@ -174,8 +185,8 @@ export default function Hero() {
         {[1, 2, 3].map(i => (
           <div key={i} className="floating-item relative w-24 h-32 rounded-2xl overflow-hidden border-4 border-white shadow-lg rotate-[-10deg]">
             <Image
-              src={i === 1 ? '/images/girls.png' : i === 2 ? '/images/accessories.png' : '/images/boys.png'}
-              alt="Product"
+              src={i === 1 ? '/images/kerala-infant.png' : i === 2 ? '/images/kerala-newborn.png' : '/images/kerala-toddler.png'}
+              alt="Artisanal Kerala Baby Wear"
               fill
               className="object-cover"
               sizes="96px"

@@ -10,7 +10,7 @@ import gsap from "gsap";
 
 const navLinks = [
   { name: "Home", href: "#" },
-  { name: "Shop", href: "#shop" },
+  { name: "Collection", href: "#shop" },
   { name: "Categories", href: "#categories" },
   { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
@@ -21,6 +21,26 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (href === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    
+    const targetId = href.replace("#", "");
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      const offset = 80;
+      const targetPos = elem.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({
+        top: targetPos,
+        behavior: "smooth"
+      });
+    }
+    setMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,6 +93,7 @@ export default function Navbar() {
           <Link
             key={link.name}
             href={link.href}
+            onClick={(e) => scrollToSection(e, link.href)}
             className="text-[11px] font-bold uppercase tracking-[0.3em] text-foreground/60 hover:text-primary transition-all relative group"
           >
             {link.name}
@@ -85,9 +106,10 @@ export default function Navbar() {
       <div className="hidden lg:block">
         <Link 
           href="#shop"
+          onClick={(e) => scrollToSection(e, "#shop")}
           className="px-8 py-3 rounded-full bg-primary text-white text-[10px] font-bold uppercase tracking-widest hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/20"
         >
-          Shop Collection
+          View Collection
         </Link>
       </div>
 
@@ -139,7 +161,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className="group flex flex-col"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => scrollToSection(e, link.href)}
                   >
                     <div className="flex items-center gap-4">
                       <span className="text-primary font-bold text-[10px] tracking-widest">0{i + 1}</span>

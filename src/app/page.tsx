@@ -136,10 +136,10 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="space-y-4">
             <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs">Curated Collections</span>
-            <h2 className="text-4xl md:text-6xl font-heading font-bold">Shop by <span className="italic text-primary">Category</span></h2>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold">Explore <span className="italic text-primary">Categories</span></h2>
           </div>
-          <Link href="/shop" className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors">
-            View All Collections <HiOutlineArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          <Link href="#shop" className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors">
+            Explore Collections <HiOutlineArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
@@ -147,7 +147,7 @@ export default function Home() {
           {categories.map((cat, i) => (
             <Link
               key={cat.id}
-              href={`/shop?category=${cat.id}`}
+              href="#shop"
               className="category-card group relative aspect-[3/4] rounded-[2.5rem] overflow-hidden"
             >
               <Image
@@ -174,10 +174,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="new-arrivals-header text-center space-y-4 mb-20">
             <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs">The Latest</span>
-            <h2 className="text-4xl md:text-6xl font-heading font-bold">New Arrivals</h2>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold">Latest Creations</h2>
             <p className="text-foreground/60 max-w-xl mx-auto font-light">
               Explore our newest pieces, designed with love and crafted for luxury.
-              Fresh styles arriving weekly.
+              Timeless styles for every moment.
             </p>
           </div>
 
@@ -190,9 +190,7 @@ export default function Home() {
           </div>
 
           <div className="mt-20 text-center">
-            <Button size="lg" variant="outline" className="rounded-full h-14 px-12 border-primary text-primary hover:bg-primary hover:text-white transition-all">
-              Discover All Products
-            </Button>
+            <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-foreground/20">The Complete 2026 Collection</p>
           </div>
         </div>
       </section>
@@ -219,8 +217,9 @@ export default function Home() {
                    Heritage
                  </h2>
                  <p className="text-lg md:text-2xl text-foreground/40 font-light leading-relaxed pt-4 md:pt-8 max-w-xl mx-auto lg:mx-0 px-4 md:px-0 break-words">
-                    Founded on the principles of artisanal excellence and playful innocence, 
-                    Ponimo is a celebration of the moments that define a lifetime.
+                    Dedicated to the first 18 months of life, 
+                    Ponimo celebrates the artisanal excellence and playful innocence 
+                    that define a child's earliest memories.
                  </p>
               </motion.div>
               <motion.div 
@@ -230,7 +229,7 @@ export default function Home() {
                 transition={{ duration: 1.2 }}
                 className="lg:col-span-5 relative aspect-[3/4] md:aspect-[4/5] rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-2xl"
               >
-                 <Image src="/images/girls.png" alt="Heritage" fill className="object-cover" sizes="(max-width: 768px) 100vw, 500px" />
+                 <Image src="/images/kerala-hero.png" alt="Heritage" fill className="object-cover" sizes="(max-width: 768px) 100vw, 500px" />
               </motion.div>
            </div>
         </div>
@@ -247,8 +246,8 @@ export default function Home() {
               viewport={{ once: true }}
               className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl"
             >
-              <Image 
-                src="/boutique_mission_vision.png" 
+            <Image 
+                src="/images/kerala-newborn.png" 
                 alt="Our Vision" 
                 fill 
                 className="object-cover"
