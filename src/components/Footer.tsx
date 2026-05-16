@@ -36,13 +36,13 @@ export default function Footer() {
         PONIMO
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           {/* Brand & Newsletter Section */}
           <div className="lg:col-span-5 space-y-12">
             <Link href="/" className="inline-block">
               <div className="w-40 h-20 relative brightness-0 invert">
-                <Image src="/logo.png" alt="Ponimo Logo" fill className="object-contain" />
+                <Image src="/logo.png" alt="Ponimo Logo" fill className="object-contain" sizes="160px" />
               </div>
             </Link>
             

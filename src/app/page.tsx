@@ -127,6 +127,7 @@ export default function Home() {
                 alt={cat.name}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
               <div className="absolute bottom-10 left-10">
@@ -184,6 +185,7 @@ export default function Home() {
                 alt="Our Vision" 
                 fill 
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 600px"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
             </motion.div>
@@ -246,6 +248,7 @@ export default function Home() {
             alt="Brand Story Background"
             fill
             className="object-cover opacity-20"
+            sizes="100vw"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -276,6 +279,7 @@ export default function Home() {
               alt="Brand Story Image"
               fill
               className="object-cover rounded-[3rem] rotate-3 shadow-2xl transition-transform hover:rotate-0 duration-700"
+              sizes="(max-width: 1024px) 100vw, 600px"
             />
           </div>
         </div>
@@ -288,10 +292,10 @@ export default function Home() {
             {/* Main Image Spread */}
             <div className="lg:col-span-7 relative">
               <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
-                <Image src="/images/hero-master.png" alt="Editorial" fill className="object-cover" />
+                <Image src="/images/hero-master.png" alt="Editorial" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 800px" />
               </div>
               <div className="absolute -bottom-10 -right-10 w-64 h-80 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-8 border-[#F9F6F0] hidden md:block">
-                <Image src="/images/toddlers.png" alt="Detail" fill className="object-cover" />
+                <Image src="/images/toddlers.png" alt="Detail" fill className="object-cover" sizes="256px" />
               </div>
               {/* Decorative Stamp */}
               <div className="absolute -top-12 -left-12 w-32 h-32 z-30 opacity-20">

@@ -63,7 +63,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/" className="relative z-50 flex items-center group">
         <div className="w-32 h-16 relative">
-          <Image src="/logo.png" alt="Ponimo Logo" fill className="object-contain" />
+          <Image src="/logo.png" alt="Ponimo Logo" fill className="object-contain" sizes="128px" />
         </div>
       </Link>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
             {/* Mobile Header */}
             <div className="flex items-center justify-between p-8 relative z-10">
                <div className="w-24 h-12 relative brightness-0 invert">
-                 <Image src="/logo.png" alt="Ponimo Logo" fill className="object-contain" />
+                 <Image src="/logo.png" alt="Ponimo Logo" fill className="object-contain" sizes="96px" />
                </div>
                <button 
                  onClick={() => setMobileMenuOpen(false)}

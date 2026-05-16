@@ -78,6 +78,7 @@ export default function Hero() {
           fill
           priority
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
         />
         {/* Black Overlay for Text Contrast */}
         <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
@@ -171,12 +172,13 @@ export default function Hero() {
       {/* Side Decorative Elements */}
       <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-16 pointer-events-none">
         {[1, 2, 3].map(i => (
-          <div key={i} className="floating-item w-24 h-32 rounded-2xl overflow-hidden border-4 border-white shadow-lg rotate-[-10deg]">
+          <div key={i} className="floating-item relative w-24 h-32 rounded-2xl overflow-hidden border-4 border-white shadow-lg rotate-[-10deg]">
             <Image
               src={i === 1 ? '/images/girls.png' : i === 2 ? '/images/accessories.png' : '/images/boys.png'}
               alt="Product"
               fill
               className="object-cover"
+              sizes="96px"
             />
           </div>
         ))}

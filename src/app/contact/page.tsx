@@ -79,33 +79,33 @@ export default function Contact() {
                     <p className="text-[10px] text-foreground/30 font-bold uppercase tracking-[0.3em]">Estimated response: 120 Minutes</p>
                  </div>
 
-                 <form className="space-y-6">
+                  <form className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                        <div className="space-y-3">
                           <label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-4">Full Name</label>
-                          <input type="text" placeholder="e.g. Alexander Knight" className="w-full h-16 px-8 rounded-3xl bg-secondary/30 border-2 border-transparent focus:border-primary/20 focus:bg-white focus:outline-none transition-all text-lg font-light" />
+                          <input type="text" placeholder="e.g. Alexander Knight" className="w-full h-16 px-8 rounded-3xl bg-secondary/30 border-2 border-transparent focus:border-primary/20 focus:bg-white focus:outline-none transition-all text-lg font-light" suppressHydrationWarning />
                        </div>
                        <div className="space-y-3">
                           <label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-4">Email Address</label>
-                          <input type="email" placeholder="alex@studio.com" className="w-full h-16 px-8 rounded-3xl bg-secondary/30 border-2 border-transparent focus:border-primary/20 focus:bg-white focus:outline-none transition-all text-lg font-light" />
+                          <input type="email" placeholder="alex@studio.com" className="w-full h-16 px-8 rounded-3xl bg-secondary/30 border-2 border-transparent focus:border-primary/20 focus:bg-white focus:outline-none transition-all text-lg font-light" suppressHydrationWarning />
                        </div>
                     </div>
                     <div className="space-y-3">
                        <label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-4">Inquiry Subject</label>
-                       <input type="text" placeholder="How can we assist you?" className="w-full h-16 px-8 rounded-3xl bg-secondary/30 border-2 border-transparent focus:border-primary/20 focus:bg-white focus:outline-none transition-all text-lg font-light" />
+                       <input type="text" placeholder="How can we assist you?" className="w-full h-16 px-8 rounded-3xl bg-secondary/30 border-2 border-transparent focus:border-primary/20 focus:bg-white focus:outline-none transition-all text-lg font-light" suppressHydrationWarning />
                     </div>
                     <div className="space-y-3">
                        <label className="text-[10px] font-black uppercase tracking-widest text-foreground/40 ml-4">Your Message</label>
-                       <textarea placeholder="Describe your request in detail..." className="w-full h-40 p-8 rounded-[2rem] bg-secondary/30 border-2 border-transparent focus:border-primary/20 focus:bg-white focus:outline-none transition-all text-lg font-light resize-none" />
+                       <textarea placeholder="Describe your request in detail..." className="w-full h-40 p-8 rounded-[2rem] bg-secondary/30 border-2 border-transparent focus:border-primary/20 focus:bg-white focus:outline-none transition-all text-lg font-light resize-none" suppressHydrationWarning />
                     </div>
                     
                     <div className="mb-0">
-                       <Button className="w-full md:w-auto h-20 px-16 rounded-full bg-primary text-white text-xl font-bold gap-4 group hover:scale-[1.02] active:scale-95 transition-all shadow-2xl shadow-primary/20">
+                       <Button className="w-full md:w-auto h-20 px-16 rounded-full bg-primary text-white text-xl font-bold gap-4 group hover:scale-[1.02] active:scale-95 transition-all shadow-2xl shadow-primary/20" suppressHydrationWarning>
                           Send Inquiry 
                           <HiOutlinePaperAirplane size={22} className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
                        </Button>
                     </div>
-                 </form>
+                  </form>
               </div>
            </motion.div>
 
@@ -140,7 +140,7 @@ export default function Contact() {
                 transition={{ duration: 1.2 }}
                 className="relative aspect-[4/5] rounded-[4rem] overflow-hidden group"
               >
-                 <Image src="/images/hero-master.png" alt="Our Studio" fill className="object-cover transition-transform duration-[2s] group-hover:scale-110" />
+                 <Image src="/images/hero-master.png" alt="Our Studio" fill className="object-cover transition-transform duration-[2s] group-hover:scale-110" sizes="(max-width: 1024px) 100vw, 600px" />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                  <div className="absolute bottom-12 left-12 right-12 space-y-4">
                     <div className="w-12 h-[1px] bg-primary" />
@@ -149,7 +149,7 @@ export default function Contact() {
                       Visit us in the heart of the fashion district for a private viewing of our 
                       latest artisanal pieces. By appointment only.
                     </p>
-                    <button className="text-primary font-bold uppercase tracking-widest text-[10px] border-b border-primary/30 pb-1 hover:border-primary transition-colors">Book a Viewing</button>
+                    <button className="text-primary font-bold uppercase tracking-widest text-[10px] border-b border-primary/30 pb-1 hover:border-primary transition-colors" suppressHydrationWarning>Book a Viewing</button>
                  </div>
               </motion.div>
            </div>

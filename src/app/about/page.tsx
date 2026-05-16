@@ -48,7 +48,7 @@ export default function About() {
                 transition={{ duration: 1.2 }}
                 className="lg:col-span-5 relative aspect-[3/4] md:aspect-[4/5] rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-2xl"
               >
-                 <Image src="/images/girls.png" alt="Heritage" fill className="object-cover" />
+                 <Image src="/images/girls.png" alt="Heritage" fill className="object-cover" sizes="(max-width: 768px) 100vw, 500px" />
               </motion.div>
            </div>
         </div>
@@ -58,7 +58,7 @@ export default function About() {
       <section className="py-20 md:py-32 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
            <motion.div {...fadeInUp} className="relative aspect-square rounded-[3rem] md:rounded-[4rem] overflow-hidden order-2 lg:order-1">
-              <Image src="/images/hero-master.png" alt="Philosophy" fill className="object-cover" />
+              <Image src="/images/hero-master.png" alt="Philosophy" fill className="object-cover" sizes="(max-width: 768px) 100vw, 600px" />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
            </motion.div>
            <motion.div {...fadeInUp} className="space-y-8 md:space-y-10 order-1 lg:order-2 text-center lg:text-left">
@@ -98,7 +98,7 @@ export default function About() {
            
            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
               <motion.div {...fadeInUp} className="md:col-span-8 relative h-[400px] md:h-[500px] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden group">
-                 <Image src="/images/boys.png" alt="Craft" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                 <Image src="/images/boys.png" alt="Craft" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 800px" />
                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-700" />
                  <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-white">
                     <h4 className="text-2xl md:text-3xl font-heading font-bold mb-1 md:mb-2">Sustainable Linens</h4>
@@ -106,7 +106,7 @@ export default function About() {
                  </div>
               </motion.div>
               <motion.div {...fadeInUp} className="md:col-span-4 relative h-[400px] md:h-[500px] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden group">
-                 <Image src="/images/toddlers.png" alt="Detail" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+                 <Image src="/images/toddlers.png" alt="Detail" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 400px" />
                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-700" />
                  <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-white">
                     <h4 className="text-2xl md:text-3xl font-heading font-bold mb-1 md:mb-2">Organic Cotton</h4>
